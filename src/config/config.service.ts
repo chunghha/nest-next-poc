@@ -1,6 +1,6 @@
+import * as Joi from '@hapi/joi';
 import { parse } from 'dotenv';
 import * as fs from 'fs';
-import * as Joi from 'joi';
 
 export interface EnvConfig {
   [key: string]: string;

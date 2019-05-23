@@ -26,9 +26,10 @@
         "esSpecCompliant": true
       }
     ],
-    "object-literal-sort-keys": false,
-    "no-unused-variable": true,
     "interface-name": false,
-    "no-empty-interface": false
+    "jsx-no-multiline-js": false,
+    "no-empty-interface": false,
+    "no-unused-variable": true,
+    "object-literal-sort-keys": false
   }
 }

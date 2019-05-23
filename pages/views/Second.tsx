@@ -5,7 +5,6 @@ import blue from '@material-ui/core/colors/blue';
 import red from '@material-ui/core/colors/red';
 import { createMuiTheme } from '@material-ui/core/styles';
 import { ThemeProvider } from '@material-ui/styles';
-import VerticalLinearStepper from '@src/components/VerticalLinearStepper';
 
 interface InitialProps {
   query: string;
@@ -20,7 +19,7 @@ const theme = createMuiTheme({
   },
 });
 
-class Index extends React.Component<Props> {
+class Second extends React.Component<Props> {
   public static getInitialProps({ query }: InitialProps) {
     return { query };
   }
@@ -32,14 +31,13 @@ class Index extends React.Component<Props> {
           <Button variant="contained" color="primary">
             {this.props.query}
           </Button>
-          <Button variant="contained" color="secondary" href="/second">
-            Go To Second
+          <Button variant="contained" color="secondary" href="/">
+            Go To Root
           </Button>
-          <VerticalLinearStepper/>
         </ThemeProvider>
       </div>
     );
   }
 }
 
-export default Index;
+export default Second;

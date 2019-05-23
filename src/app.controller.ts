@@ -17,4 +17,10 @@ export class AppController {
   public root(): string {
     return this.appService.root();
   }
+
+  @Get('/second')
+  @Render('Second')
+  public second(): string {
+    return this.appService.second();
+  }
 }

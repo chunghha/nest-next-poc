@@ -4,11 +4,12 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon src/main.ts",
+    "dev": "yarn build:clean && nodemon src/main.ts",
     "build:clean": "rimraf .next",
     "build:server": "npx tsc --project tsconfig.server.json && npx babel .next/production-server -d .next/production-server --config-file ./.babelrc-server --extensions \".js\"",
     "build:ui": "npx next build",
     "build": "yarn build:clean && yarn build:server && yarn build:ui",
+    "prestart": "yarn build",
     "start": "cross-env-shell NODE_ENV=production pm2 start ecosystem.config.js"
   },
   "dependencies": {
